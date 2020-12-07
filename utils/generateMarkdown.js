@@ -19,7 +19,11 @@ ${data.description}
 
 ## Installation
 
+Run the following command to install dependencies:
+
+\`\`\`
 ${data.installation}
+\`\`\`
 
 ## Usage
 
