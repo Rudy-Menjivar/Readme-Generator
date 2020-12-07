@@ -1,3 +1,11 @@
+function standardContributing(data) {
+  if (data.contributing == "Yes") {
+    return `To participate in this project, please review the following guidelines:
+    * [Submit feature requests and bugs](https://github.com/${data.github}/${data.title}/issues)` 
+  }
+    return `Contributing isn't active at this time.`
+}
+
 function generateMarkdown(data) {
   return `# ${data.title}
 
@@ -31,7 +39,7 @@ ${data.usage}
 
 ## Contributing
 
-${data.contributing}
+${standardContributing(data)}
 
 ## Tests
 
@@ -48,5 +56,4 @@ ${data.email}
 
   `;
   }
-  
   module.exports = generateMarkdown;
