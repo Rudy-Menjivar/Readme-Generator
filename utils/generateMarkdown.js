@@ -5,6 +5,18 @@ function generateMarkdown(data) {
 
 ${data.description}
 
+## Content
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
 ## Installation
 
 ${data.installation}
