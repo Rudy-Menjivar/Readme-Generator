@@ -21,9 +21,18 @@ function howToUse(data) {
   return ''
 }
 
-function standardContributing(data) {
+function contribute(data) {
+  if (data.contributing !=="No") {
+    return `* [Contributing](#contributing)`
+  }
+  return ''
+}
+
+function addContributing(data) {
   if (data.contributing == "Yes") {
-    return `To participate in this project, please review the following guidelines:
+    return `## Contributing
+    \n
+    \nTo participate in this project, please review the following guidelines:
     \n1. Create a branch for your update (after forking and cloning)
     \n   \`git checkout -b <branchName>\`
     \n2. Make changes or additions to new or existing file & stage it
@@ -34,7 +43,7 @@ function standardContributing(data) {
     \n   \`git push -u origin <branchName>\`
     \n5. Finally, submit [feature requests and bugs](https://github.com/${data.github}/${data.title}/issues) and open a [pull request](https://github.com/${data.github}/${data.title}/pulls)`
   }
-    return `Contributing isn't active at this time.`
+    return ``
 }
 
 function generateMarkdown(data) {
@@ -48,7 +57,7 @@ ${install(data)}
 
 ${howToUse(data)}
 
-* [Contributing](#contributing)
+${contribute(data)}
 
 * [Tests](#tests)
 
@@ -70,9 +79,7 @@ Run the following command to run this application:
 ${data.usage}
 \`\`\`
 
-## Contributing
-
-${standardContributing(data)}
+${addContributing(data)}
 
 ## Tests
 
