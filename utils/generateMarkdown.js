@@ -35,7 +35,7 @@ ${data.description}
 
 ## Installation
 
-Run the following command to install dependencies:
+Run the following command before installing any dependencies:
 
 \`\`\`
 ${data.installation}
@@ -43,7 +43,11 @@ ${data.installation}
 
 ## Usage
 
+Run the following command to run this application:
+
+\`\`\`
 ${data.usage}
+\`\`\`
 
 ## Contributing
 
