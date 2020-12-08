@@ -28,7 +28,8 @@ const questions = [
         type: "list",
         name: "contributing",
         message: "Include standard contribution guidelines?",
-        choices: ["Yes", "No"]
+        choices: ["Yes", "No"],
+        default: "Yes"
     },
     {
         type: "input",
@@ -39,7 +40,8 @@ const questions = [
         type: "list",
         name: "license",
         message: "Which of the following licenses should be included?",
-        choices: ["MIT", "None"]
+        choices: ["MIT", "None"],
+        default: "MIT"
     },
     {
         type: "input",
