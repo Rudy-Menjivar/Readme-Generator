@@ -7,7 +7,7 @@ function addDescription(data) {
   return ''
 }
 
-function install(data) {
+function installLink(data) {
   if (data.installation !== '') {
     return `* [Installation](#installation)`
   }
@@ -27,14 +27,14 @@ Run the following command before installing any dependencies:
   return ''
 }
 
-function howToUse(data) {
+function usageLink(data) {
   if (data.usage !=='') {
     return `* [Usage](#usage)`
   }
   return ''
 }
 
-function contribute(data) {
+function contributeLink(data) {
   if (data.contributing !=="No") {
     return `* [Contributing](#contributing)`
   }
@@ -86,11 +86,11 @@ ${addDescription(data)}
 
 ## Content
 
-${install(data)}
+${installLink(data)}
 
-${howToUse(data)}
+${usageLink(data)}
 
-${contribute(data)}
+${contributeLink(data)}
 
 ${testsLink(data)}
 
