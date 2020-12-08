@@ -121,8 +121,16 @@ function addLicense(data) {
   return ''
 }
 
+function licenseBadge(data) {
+  if (data.license !=="None") {
+    return `![{data.license}](https://shields.io/badge/license-${data.license}-green)`
+  }
+  return ''
+}
+
 function generateMarkdown(data) {
   return `# ${data.title}
+${licenseBadge(data)}
 
 ${addDescription(data)}
 
