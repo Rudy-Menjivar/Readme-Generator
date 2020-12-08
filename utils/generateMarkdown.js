@@ -1,3 +1,12 @@
+function addDescription(data) {
+  if (data.description !== '') {
+    return `## Description
+    \n
+    \n${data.description}`
+  }
+  return ''
+}
+
 function standardContributing(data) {
   if (data.contributing == "Yes") {
     return `To participate in this project, please review the following guidelines:
@@ -17,9 +26,7 @@ function standardContributing(data) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
-## Description
-
-${data.description}
+${addDescription(data)}
 
 ## Content
 
@@ -59,7 +66,9 @@ ${data.tests}
 
 ## License
 
-${data.license}
+Copyright (c) ${data.github}. All rights reserved.
+
+Licensed under the ${data.license} license.
 
 ## Questions
 
