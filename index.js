@@ -36,7 +36,8 @@ const questions = [
     {
         type: "input",
         name: "tests",
-        message: "Include any test commands or instructions?"
+        message: "Include any test commands?",
+        default: "npm run jest"
     },
     {
         type: "list",
