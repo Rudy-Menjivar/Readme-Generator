@@ -17,12 +17,14 @@ const questions = [
     {
         type: "input",
         name: "installation",
-        message: "Please include any installation commands or instructions."
+        message: "Please include any installation commands or instructions.",
+        default: "npm init -y"
     },
     {
         type: "input",
         name: "usage",
-        message: "How do you use this repository?"
+        message: "What commands do you use for this repository?",
+        default: "node index.js"
     },
     {
         type: "list",
