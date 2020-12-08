@@ -14,6 +14,19 @@ function install(data) {
   return ''
 }
 
+function addInstall(data) {
+  if (data.installation !== '') {
+    return `## Installation
+
+Run the following command before installing any dependencies:
+  \`\`\`
+  ${data.installation}
+  \`\`\`
+  `
+  }
+  return ''
+}
+
 function howToUse(data) {
   if (data.usage !=='') {
     return `* [Usage](#usage)`
@@ -63,13 +76,7 @@ ${contribute(data)}
 
 * [Questions](#questions)
 
-## Installation
-
-Run the following command before installing any dependencies:
-
-\`\`\`
-${data.installation}
-\`\`\`
+${addInstall(data)}
 
 ## Usage
 
