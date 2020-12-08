@@ -12,18 +12,18 @@ const questions = [
     {
         type: "input",
         name: "description",
-        message: "Please describe your project."
+        message: "Please provide a short description of your project."
     },
     {
         type: "input",
         name: "installation",
-        message: "Please include any installation commands or instructions.",
+        message: "Please include any required installation commands.",
         default: "npm init -y"
     },
     {
         type: "input",
         name: "usage",
-        message: "What commands do you use for this repository?",
+        message: "What command is needed to use this application?",
         default: "node index.js"
     },
     {
