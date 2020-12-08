@@ -34,6 +34,19 @@ function usageLink(data) {
   return ''
 }
 
+function addUsage(data) {
+  if (data.usage !== '') {
+    return `## Usage
+
+Run this command to use this application:
+  \`\`\`
+  ${data.usage}
+  \`\`\`
+  `
+  }
+  return ''
+}
+
 function contributeLink(data) {
   if (data.contributing !=="No") {
     return `* [Contributing](#contributing)`
@@ -116,13 +129,8 @@ ${questionsLink(data)}
 
 ${addInstall(data)}
 
-## Usage
 
-Run the following command to run this application:
-
-\`\`\`
-${data.usage}
-\`\`\`
+${addUsage(data)}
 
 ${addContributing(data)}
 
