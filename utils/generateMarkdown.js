@@ -59,6 +59,26 @@ function addContributing(data) {
     return ``
 }
 
+function testsLink(data) {
+  if (data.tests !== '') {
+    return `* [Tests](#tests)`
+  }
+  return ''
+}
+
+function addtests(data) {
+  if (data.tests !== '') {
+    return `## Tests
+    
+  Run the following command for testing:
+  \`\`\`
+  ${data.tests}
+  \`\`\`
+  `
+  }
+  return ''
+}
+
 function generateMarkdown(data) {
   return `# ${data.title}
 
@@ -72,7 +92,7 @@ ${howToUse(data)}
 
 ${contribute(data)}
 
-* [Tests](#tests)
+${testsLink(data)}
 
 * [Questions](#questions)
 
@@ -88,9 +108,7 @@ ${data.usage}
 
 ${addContributing(data)}
 
-## Tests
-
-${data.tests}
+${addtests(data)}
 
 ## License
 
