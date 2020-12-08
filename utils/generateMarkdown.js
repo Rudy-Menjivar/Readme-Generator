@@ -110,6 +110,17 @@ function addQuestions(data) {
   return ''
 }
 
+function addLicense(data) {
+  if (data.license !=="None") {
+    return `## License
+
+  Copyright (c) ${data.github}. All rights reserved.
+    
+  Licensed under the [${data.license}](./LICENSE.txt)  license.`
+  }
+  return ''
+}
+
 function generateMarkdown(data) {
   return `# ${data.title}
 
@@ -136,11 +147,7 @@ ${addContributing(data)}
 
 ${addtests(data)}
 
-## License
-
-Copyright (c) ${data.github}. All rights reserved.
-
-Licensed under the ${data.license} license.
+${addLicense(data)}
 
 ${addQuestions(data)}
 
