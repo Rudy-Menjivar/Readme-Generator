@@ -7,6 +7,20 @@ function addDescription(data) {
   return ''
 }
 
+function install(data) {
+  if (data.installation !== '') {
+    return `* [Installation](#installation)`
+  }
+  return ''
+}
+
+function howToUse(data) {
+  if (data.usage !=='') {
+    return `* [Usage](#usage)`
+  }
+  return ''
+}
+
 function standardContributing(data) {
   if (data.contributing == "Yes") {
     return `To participate in this project, please review the following guidelines:
@@ -30,9 +44,9 @@ ${addDescription(data)}
 
 ## Content
 
-* [Installation](#installation)
+${install(data)}
 
-* [Usage](#usage)
+${howToUse(data)}
 
 * [Contributing](#contributing)
 
