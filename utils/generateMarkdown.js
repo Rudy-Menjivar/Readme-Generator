@@ -79,6 +79,24 @@ function addtests(data) {
   return ''
 }
 
+function questionsLink(data) {
+  if (data.email !== '') {
+    return `* [Questions](#questions)`
+  }
+  return ''
+}
+
+function addQuestions(data) {
+  if (data.email !=='') {
+    return `## Questions
+  
+  If you have any questions, then feel free to contact me at ${data.email}. 
+  ### Complete Work
+  * [Author](https://github.com/${data.github})`
+  }
+  return ''
+}
+
 function generateMarkdown(data) {
   return `# ${data.title}
 
@@ -94,7 +112,7 @@ ${contributeLink(data)}
 
 ${testsLink(data)}
 
-* [Questions](#questions)
+${questionsLink(data)}
 
 ${addInstall(data)}
 
@@ -116,10 +134,7 @@ Copyright (c) ${data.github}. All rights reserved.
 
 Licensed under the ${data.license} license.
 
-## Questions
-
-${data.github}
-${data.email}
+${addQuestions(data)}
 
   `;
   }
