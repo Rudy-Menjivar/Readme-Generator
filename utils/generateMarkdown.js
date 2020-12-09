@@ -1,7 +1,15 @@
 function addDescription(data) {
   if (data.description !== '') {
     return `## Description
-    \n${data.description}`
+    \n${data.description}
+    `
+  }
+  return ''
+}
+
+function githubLink(data) {
+  if (data.github !== '') {
+    return `* [GitHub Repository](https://github.com/${data.github}/${data.title}/)`
   }
   return ''
 }
@@ -17,7 +25,7 @@ function addInstall(data) {
   if (data.installation !== '') {
     return `## Installation
 
-Run the following command before installing any dependencies:
+Run the following command to install the required dependencies:
   \`\`\`
   ${data.installation}
   \`\`\`
@@ -37,7 +45,7 @@ function addUsage(data) {
   if (data.usage !== '') {
     return `## Usage
 
-Run this command to use this application:
+Run this command to invoke this application:
   \`\`\`
   ${data.usage}
   \`\`\`
@@ -56,6 +64,7 @@ function contributeLink(data) {
 function addContributing(data) {
   if (data.contributing == "Yes") {
     return `## Contributing
+    \nAny community contributions will help in achieving this project's success, so any help is greatly appreciated.
     \nTo participate in this project, please review the following guidelines:
     \n1. Create a branch for your update (after forking and cloning)
     \n   \`git checkout -b <branchName>\`
@@ -82,7 +91,7 @@ function addtests(data) {
   if (data.tests !== '') {
     return `## Tests
     
-  Run the following command for testing:
+  For testing, run this command:
   \`\`\`
   ${data.tests}
   \`\`\`
@@ -102,7 +111,7 @@ function addQuestions(data) {
   if (data.email !=='') {
     return `## Questions
   
-  If you have any questions, then feel free to contact me at ${data.email} and you can also access my complete work [here](https://github.com/${data.github}).`
+  If you have any questions, then feel free to contact me at ${data.email} and you can also access my complete work at [GitHub](https://github.com/${data.github}).`
   }
   return ''
 }
@@ -134,6 +143,8 @@ ${addDescription(data)}
 
 ## Content
 
+${githubLink(data)}
+
 ${installLink(data)}
 
 ${usageLink(data)}
@@ -154,7 +165,6 @@ ${addtests(data)}
 
 ${addLicense(data)}
 
-${addQuestions(data)}
-`;
+${addQuestions(data)}`;
   }
   module.exports = generateMarkdown;
