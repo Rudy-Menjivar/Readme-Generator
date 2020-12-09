@@ -1,4 +1,5 @@
 const generateMarkdown = require("./utils/generateMarkdown");
+const generateLICENSE = require("./utils/generateLICENSE")
 const inquirer = require('inquirer')
 const fs = require('fs')
 
@@ -74,6 +75,7 @@ function init() {
     inquirer.prompt(questions)
     .then(function(data) {
         writeToFile("README.md", generateMarkdown(data));
+        writeToFile("LICENSE.txt", generateLICENSE(data))
         console.log(data)
     })
 }
