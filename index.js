@@ -19,12 +19,12 @@ const questions = [
         type: "input",
         name: "installation",
         message: "Please include any required installation commands.",
-        default: "npm init -y"
+        default: "npm install"
     },
     {
         type: "input",
         name: "usage",
-        message: "What command is needed to use this application?",
+        message: "What command is needed to invoke this application?",
         default: "node index.js"
     },
     {
@@ -37,8 +37,8 @@ const questions = [
     {
         type: "input",
         name: "tests",
-        message: "Include any test commands?",
-        default: "npm run jest"
+        message: "Please include any test commands.",
+        default: "npm run test"
     },
     {
         type: "list",
