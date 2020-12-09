@@ -1,7 +1,6 @@
 function addDescription(data) {
   if (data.description !== '') {
     return `## Description
-    \n
     \n${data.description}`
   }
   return ''
@@ -23,7 +22,7 @@ Run the following command before installing any dependencies:
   ${data.installation}
   \`\`\`
   `
-  }
+}
   return ''
 }
 
@@ -57,7 +56,6 @@ function contributeLink(data) {
 function addContributing(data) {
   if (data.contributing == "Yes") {
     return `## Contributing
-    \n
     \nTo participate in this project, please review the following guidelines:
     \n1. Create a branch for your update (after forking and cloning)
     \n   \`git checkout -b <branchName>\`
@@ -67,7 +65,8 @@ function addContributing(data) {
     \n   \`git commmit -m <your code comments>\`
     \n4. Push your changes with your remote branch name
     \n   \`git push -u origin <branchName>\`
-    \n5. Finally, submit [feature requests and bugs](https://github.com/${data.github}/${data.title}/issues) and open a [pull request](https://github.com/${data.github}/${data.title}/pulls)`
+    \n5. Finally, submit [feature requests and bugs](https://github.com/${data.github}/${data.title}/issues) and open a [pull request](https://github.com/${data.github}/${data.title}/pulls)
+    `
   }
     return ``
 }
@@ -103,9 +102,7 @@ function addQuestions(data) {
   if (data.email !=='') {
     return `## Questions
   
-  If you have any questions, then feel free to contact me at ${data.email}. 
-  ### Complete Work
-  * [Author](https://github.com/${data.github})`
+  If you have any questions, then feel free to contact me at ${data.email} and you can also access my complete work [here](https://github.com/${data.github}).`
   }
   return ''
 }
@@ -116,7 +113,8 @@ function addLicense(data) {
 
   Copyright (c) ${data.github}. All rights reserved.
     
-  Licensed under the [${data.license}](./LICENSE.txt)  license.`
+  Licensed under the [${data.license}](./LICENSE.txt) license.
+  `
   }
   return ''
 }
@@ -148,7 +146,6 @@ ${questionsLink(data)}
 
 ${addInstall(data)}
 
-
 ${addUsage(data)}
 
 ${addContributing(data)}
@@ -158,7 +155,6 @@ ${addtests(data)}
 ${addLicense(data)}
 
 ${addQuestions(data)}
-
-  `;
+`;
   }
   module.exports = generateMarkdown;
