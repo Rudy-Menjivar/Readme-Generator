@@ -10,7 +10,7 @@ The primary goal of this README generator is to create a high-quality README fil
 
 * [GitHub Repository](https://github.com/Rudy-Menjivar/readme-generator/)
 
-* [Walkthrough Video](https://github.com/Rudy-Menjivar/readme-generator/utils/walkthroughVid.mp4)
+* [Walkthrough Video](https://drive.google.com/file/d/1tBFoAyEnu6_JMZcazRAuur5s5lMwvIzQ/view?usp=sharing)
 
 * [Installation](#installation)
 
