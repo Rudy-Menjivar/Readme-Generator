@@ -26,9 +26,9 @@ function addInstall(data) {
     return `## Installation
 
 Run the following command to install the required dependencies:
-  \`\`\`
-  ${data.installation}
-  \`\`\`
+\`\`\`
+${data.installation}
+\`\`\`
   `
 }
   return ''
@@ -46,9 +46,9 @@ function addUsage(data) {
     return `## Usage
 
 Run this command to invoke this application:
-  \`\`\`
-  ${data.usage}
-  \`\`\`
+\`\`\`
+${data.usage}
+\`\`\`
   `
   }
   return ''
@@ -91,10 +91,10 @@ function addtests(data) {
   if (data.tests !== '') {
     return `## Tests
     
-  For testing, run this command:
-  \`\`\`
-  ${data.tests}
-  \`\`\`
+For testing, run this command:
+\`\`\`
+${data.tests}
+\`\`\`
   `
   }
   return ''
@@ -111,7 +111,7 @@ function addQuestions(data) {
   if (data.email !=='') {
     return `## Questions
   
-  If you have any questions, then feel free to contact me at ${data.email} and you can also access my complete work at [GitHub](https://github.com/${data.github}).`
+If you have any questions, then feel free to contact me at ${data.email}. You may also access my complete work at [GitHub](https://github.com/${data.github}).`
   }
   return ''
 }
@@ -120,9 +120,9 @@ function addLicense(data) {
   if (data.license !=="None") {
     return `## License
 
-  Copyright (c) ${data.github}. All rights reserved.
+Copyright (c) ${data.github}. All rights reserved.
     
-  Licensed under the [${data.license}](./LICENSE.txt) license.
+Licensed under the [${data.license}](./LICENSE.txt) license.
   `
   }
   return ''
