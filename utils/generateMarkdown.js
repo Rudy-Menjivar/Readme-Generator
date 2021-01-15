@@ -111,7 +111,9 @@ function addQuestions(data) {
   if (data.email !=='') {
     return `## Questions
   
-If you have any questions, then feel free to contact me at ${data.email}. You may also access my complete work at [GitHub](https://github.com/${data.github}).`
+You can find my complete work at [GitHub](https://github.com/${data.github}) and if you have any questions, then feel free to contact by email.
+* ${data.email}`
+
   }
   return ''
 }
